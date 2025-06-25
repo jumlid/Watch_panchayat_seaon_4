@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandu Adarsh</title>
+</head>
+
+<body>
+    <div class="container">
+        <iframe src="https://vidsrc.xyz/embed/tv?imdb=tt12004706&season=4&episode=1" frameborder="0"></iframe>
+        <div class="control">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+        </div>
+    </div>
+
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .container {
+            height: 100vh;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 90vh;
+        }
+
+        .control {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            text-align: center;
+            width: 30px;
+            margin-left: 5px;
+            height: 30px;
+        }
+    </style>
+
+
+</body>
+<script>
+    let ep = 1
+    a = document.getElementsByClassName('control')[0]
+    a.addEventListener("click", (e) => {
+        if (e.target.className != "control") {
+            ep = e.target.innerText
+            document.getElementsByTagName("iframe")[0].src = `https://vidsrc.xyz/embed/tv?imdb=tt12004706&season=4&episode=${ep}`
+
+            //   alert()
+        }
+
+    })
+</script>
+
+</html>
